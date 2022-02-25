@@ -6,7 +6,8 @@ from record import record
 window = Tk()
 window.title('Live CCTV CAMERA')
 window.iconphoto(False,PhotoImage(file='eeeee.png'))
-window.geometry('1080x600')
+window.geometry('700x600+90+70')
+window.resizable(0,0)
 
 
 # main Frame
@@ -32,7 +33,7 @@ label_icon.grid(row=3,pady=(10),column = 1)
 
 
 
-btn_image =  Image.open('img_1.png')
+btn_image =  Image.open('video_Record.png')
 btn_image = btn_image.resize((50,50),Image.ANTIALIAS)
 btn_image = ImageTk.PhotoImage(btn_image)
 
@@ -41,15 +42,13 @@ btn =Button(mainframe,text='VIDEO RECORD',command =record ,font=('Helvetica',25,
 btn.grid(row=5,pady=(20,10),column=1)
 
 
-
 # exist button
+btn_image3 = Image.open('exit.png')
+btn_image4 = btn_image3.resize((20,20),Image.ANTIALIAS)
+btn_image4 = ImageTk.PhotoImage(btn_image3)
 
-btn_image1 =  Image.open('img_1.png')
-btn_image2 = btn_image1.resize((50,50),Image.ANTIALIAS)
-btn_image2 = ImageTk.PhotoImage(btn_image1)
 
-
-btn1 =Button(mainframe,text='EXIT',font=('Helvetica',25,'bold'),height=90,width=300,fg='orange',image=btn_image,compound='left')
+btn1 =Button(mainframe,text='EXIT',font=('Helvetica',25,'bold'),height=90,width=300,fg='orange',image=btn_image4,compound='left')
 btn1.grid(row=6,pady=(20,10),column=1)
 
 
